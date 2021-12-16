@@ -2,6 +2,11 @@ receivers:
   otlp:
     protocols:
       grpc:
+        tls:
+          cert_file: /tls/server-cert.pem
+          key_file: /tls/server-key.pem
+          ca_file: /tls/ca.pem
+          client_ca_file: /tls/ca.pem
 
 exporters:
   prometheus:

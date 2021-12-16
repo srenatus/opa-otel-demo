@@ -1,0 +1,11 @@
+distributed_tracing:
+  type: grpc
+  address: 127.0.0.1:4317
+  service_name: opa
+  sample_percentage: 100
+  encryption: mtls
+  tls_cert_file: testdata/client-cert.pem
+  tls_private_key_file: testdata/client-key.pem
+  tls_ca_cert_file: testdata/ca.pem
+decision_logs:
+  console: true
